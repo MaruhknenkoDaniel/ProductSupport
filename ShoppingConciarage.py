@@ -7,8 +7,6 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from serpapi import GoogleSearch
 
-
-
 SERPAPI_KEY = os.getenv("SERPAPI_KEY")
 GOOGLE_CREDS_FILE = "product-support-463118-9cfaa594d984.json"
 PREFERENCES_FILE = "preferences.json"

@@ -1,0 +1,17 @@
+# flyctl launch added from .gitignore
+# API Keys and Credentials
+**/product-support-463118-9cfaa594d984.json
+**/preferences.json
+**/*.env
+**/*.pem
+# Your SerpAPI Key (only if hardcoded as a literal string that you don't want visible)
+# 04545a2f5eafdd176cf70e017c4071198863aad7dbbe04b423715b52d2b56b4d 
+# ^^^ Закомментируйте эту строку или удалите, если вы измените код для использования переменных окружения
+
+# Python specific
+**/__pycache__
+**/*.pyc
+**/*.log
+**/venv
+**/.DS_Store
+fly.toml
