@@ -4,7 +4,7 @@ preferences.json
 *.env
 *.pem
 # Your SerpAPI Key (only if hardcoded as a literal string that you don't want visible)
-# f10547e17483a6df254fdc065f8ade9928ee9a88952b652213b2f977c4e718dc 
+# 04545a2f5eafdd176cf70e017c4071198863aad7dbbe04b423715b52d2b56b4d 
 # ^^^ Закомментируйте эту строку или удалите, если вы измените код для использования переменных окружения
 
 # Python specific
