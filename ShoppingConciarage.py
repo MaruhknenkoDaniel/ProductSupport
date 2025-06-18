@@ -1,18 +1,17 @@
 import json
 import os
-
+from dotenv import load_dotenv
+load_dotenv()
 from datetime import datetime
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from serpapi import GoogleSearch
-# import google.generativeai as genai # Commented out as per your request, using simulation
 
-# ------------------------
-# Configuration
-# ------------------------
-SERPAPI_KEY = os.getenv("SERPAPI_KEY", "YOUR_DEFAULT_KEY_IF_NOT_SET")
-GOOGLE_CREDS_FILE = "product-support-463118-9cfaa594d984.json" # Replace with the path to your Google credentials JSON file
-PREFERENCES_FILE = "preferences.json" # For storing preferences (Airtable imitation)
+
+
+SERPAPI_KEY = os.getenv("SERPAPI_KEY")
+GOOGLE_CREDS_FILE = "product-support-463118-9cfaa594d984.json"
+PREFERENCES_FILE = "preferences.json"
 
 # Gemini Initialization (GPT imitation for text analysis)
 # If you want to use a real Gemini API, uncomment the following lines
@@ -202,6 +201,7 @@ def search_google_products(category, keywords=[], attributes={}):
     try:
         search = GoogleSearch(params)
         results = search.get_dict()
+        print(f"\n[DEBUG] Raw SerpAPI Response: {json.dumps(results, indent=2, ensure_ascii=False)}")
 
         products = results.get("shopping_results", [])
         print(f"\n[DEBUG] Products found: {len(products)}")
